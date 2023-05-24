@@ -1,0 +1,45 @@
+.input-block {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+
+  .input-form {
+    display: flex;
+    align-items: center;
+    background: rgba(109, 103, 208, 0.37);
+    box-shadow: 0 4.26074px 21.3037px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    width: 1084px;
+    padding: 12px 0 12px 16px;
+
+    .input {
+      padding-left: 17px;
+      padding-right: 17px;
+      background: rgba(163, 157, 255, 0.71);
+      width: 980px;
+      height: 52px;
+      border-radius: 12px;
+      font-family: 'Lato', serif;
+      font-weight: 400;
+      font-size: 26.9847px;
+      display: flex;
+      align-items: center;
+      color: white;
+
+      &::placeholder {
+        color: #DADADA;
+      }
+    }
+
+    button {
+      margin-left: 16px;
+
+      img {
+        width: 37px;
+        height: 37px;
+      }
+    }
+
+  }
+}
+

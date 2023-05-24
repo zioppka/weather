@@ -1,13 +1,18 @@
 @import "weather";
+@import "input";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 * {
+  z-index: 1;
   outline: none;
   border: none;
   padding: 0;
   margin: 0;
+  background: none;
 }
 
 .container {
-  width: 1632px;
+  max-width: 1632px;
   margin: 0 auto;
 }
