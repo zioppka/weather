@@ -8,6 +8,8 @@
 
 .weather-main {
   margin-top: 83px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .temperature-block {
@@ -26,7 +28,7 @@
   .city{
     display: flex;
     margin-right: 38px;
-    justify-content: end;
+    justify-content: flex-end;
     padding-top: 53px;
 
     h2 {
@@ -140,8 +142,96 @@
         color: #E7E6FB;
       }
     }
+  }
+}
 
+.other-blocks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-between;
+  max-width: 865px;
+
+  .small-top-block {
+    background: #6D67D0;
+    border-radius: 10px;
+    width: 391px;
+    height: 311px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 27px 12px;
+
+    .block-header {
+      display: flex;
+
+      .block-title {
+        margin-left: 20px;
+        font-family: 'Lato', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 39px;
+        color: #DAD8F7;
+      }
+    }
+
+    .suns-info {
+      display: flex;
+      flex-direction: column;
+      margin-top: 55px;
+
+      .sun-info {
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+          margin-top: 68px;
+        }
+
+        p {
+          font-family: 'Lato', serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 30px;
+          color: #FFFFFF;
+          margin-right: 16px;
+          width: 85px;
+        }
+        h2 {
+          font-family: 'Lato', serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 43px;
+          color: #EAEAEA;
+          text-align: right;
+          width: 109px;
+          padding-right: 20px;
+        }
+
+        img {
+          width: 61px;
+        }
+      }
+    }
 
   }
 
+  .large-bot-block {
+    width: 865px;
+    height: 320px;
+    background: #6D67D0;
+    border-radius: 10px;
+
+    .week-items {
+      display: flex;
+
+      .week-item {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
 }
