@@ -1,10 +1,15 @@
 import clouds from '../images/clouds.svg';
 import tag from '../images/icons/location.svg';
-import { useState } from 'react';
 import { TempOther } from './TempOther';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 export function TemperatureBlock() {
-   const [city, setCity] = useState('City');
+   const cityData = useSelector((state) => state.cityData);
+
+   useEffect(() => {
+      console.log(cityData);
+   }, [cityData]);
 
    return (
       <div className={'temperature-block'}>
@@ -12,17 +17,17 @@ export function TemperatureBlock() {
 
          <div className="city">
             <img src={tag} alt="tag" />
-            <h2>{city}</h2>
+            <h2>{cityData ? cityData.name : 'City'}</h2>
          </div>
 
          <div className="temperatures">
             <h1 className={'temp-now'}>
-               18
+               {cityData ? Math.round(cityData.main.temp) : '0'}
                <div className={'celsius'}>°C</div>
             </h1>
             <div className="temp-other">
-               <p className="temp-day">22°</p>
-               <p className="temp-tonight">16°</p>
+               <p className="temp-day">0°</p>
+               <p className="temp-tonight">0°</p>
             </div>
          </div>
 

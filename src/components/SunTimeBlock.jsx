@@ -1,8 +1,12 @@
 import sunTime from '../images/icons/sun-time.svg';
 import sunset from '../images/icons/sunset.svg';
 import sunrise from '../images/icons/sunrise.svg';
+import { useSelector } from 'react-redux';
+import { getTime } from '../helper';
 
 export function SunTimeBlock() {
+   const cityData = useSelector((state) => state.cityData);
+
    return (
       <div className={'small-top-block'}>
          <div className={'block-header'}>
@@ -12,13 +16,17 @@ export function SunTimeBlock() {
          <div className="suns-info">
             <div className="sun-info">
                <p>Sunrise:</p>
-               <h2 className={'sun-time'}>6:35</h2>
+               <h2 className={'sun-time'}>
+                  {cityData ? getTime(cityData.sys.sunrise) : '00:00'}
+               </h2>
                <img src={sunrise} alt={'sunrise'} />
             </div>
 
             <div className="sun-info">
                <p>Sunset:</p>
-               <h2 className={'sun-time'}>20:43</h2>
+               <h2 className={'sun-time'}>
+                  {cityData ? getTime(cityData.sys.sunset) : '00:00'}
+               </h2>
                <img src={sunset} alt={'sunset'} />
             </div>
          </div>
