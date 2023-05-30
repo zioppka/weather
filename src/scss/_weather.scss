@@ -183,6 +183,25 @@
       }
     }
 
+    .block-subtitle {
+      font-family: 'Lato', serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 41px;
+      line-height: 49px;
+      color: #87EBCD;
+      margin-top: 35px;
+    }
+
+    .small-block-number {
+      font-family: 'Lato', serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 91px;
+      line-height: 110px;
+      color: #E7E6FB;
+    }
+
     .suns-info {
       display: flex;
       flex-direction: column;
@@ -231,13 +250,47 @@
     height: 320px;
     background: #6D67D0;
     border-radius: 10px;
+    display: flex;
 
     .week-items {
+      width: 100%;
       display: flex;
-
+      padding: 48px 0;
+      justify-content: space-around;
       .week-item {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 150px;
+
+        h2 {
+          font-family: 'Lato', serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 23.6116px;
+          line-height: 28px;
+          text-transform: capitalize;
+          color: #DAD8F7;
+        }
+
+        .weekday-temps {
+          display: flex;
+
+          p {
+            font-family: 'Lato', serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 27px;
+            line-height: 32px;
+            color: #FFFFFF;
+          }
+
+          .weekday-night-temp {
+            color: #C2BFF4;
+            margin-left: 5px;
+          }
+        }
       }
     }
   }

@@ -1,8 +1,14 @@
+import { WeekItem } from './WeekItem';
+
 export function WeeklyForecast() {
    return (
       <div className={'large-bot-block'}>
          <div className="week-items">
-            <div className="week-item"></div>
+            <WeekItem />
+            <WeekItem />
+            <WeekItem />
+            <WeekItem />
+            <WeekItem />
          </div>
       </div>
    );

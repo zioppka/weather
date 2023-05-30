@@ -5,11 +5,12 @@ import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
 export function TemperatureBlock() {
-   const cityData = useSelector((state) => state.cityData);
+   const cityData = useSelector((state) => state.weather.cityData);
+   const forecastData = useSelector((state) => state.forecast.forecastData);
 
    useEffect(() => {
-      console.log(cityData);
-   }, [cityData]);
+      console.log(forecastData);
+   });
 
    return (
       <div className={'temperature-block'}>

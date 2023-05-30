@@ -1,6 +1,6 @@
-import { api } from '../helper';
+import { api } from '../../helper';
 
-export const actionTypes = {
+export const weatherActionTypes = {
    FETCH_CITY_DATA_REQUEST: 'FETCH_CITY_DATA_REQUEST',
    FETCH_CITY_DATA_SUCCESS: 'FETCH_CITY_DATA_SUCCESS',
    FETCH_CITY_DATA_FAILURE: 'FETCH_CITY_DATA_FAILURE',
@@ -8,20 +8,20 @@ export const actionTypes = {
 
 export const fetchCityDataRequest = () => {
    return {
-      type: actionTypes.FETCH_CITY_DATA_REQUEST,
+      type: weatherActionTypes.FETCH_CITY_DATA_REQUEST,
    };
 };
 
 export const fetchCityDataSuccess = (data) => {
    return {
-      type: actionTypes.FETCH_CITY_DATA_SUCCESS,
+      type: weatherActionTypes.FETCH_CITY_DATA_SUCCESS,
       payload: data,
    };
 };
 
 export const fetchCityDataFailure = (err) => {
    return {
-      type: actionTypes.FETCH_CITY_DATA_FAILURE,
+      type: weatherActionTypes.FETCH_CITY_DATA_FAILURE,
       payload: err,
    };
 };

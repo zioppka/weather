@@ -1,27 +1,27 @@
-import { actionTypes } from './actions';
+import { forecastActionTypes } from '../actions/forecastWeatherActions';
 
 const initialState = {
-   cityData: null,
-   loading: false,
+   forecastData: null,
+   loadingRequest: false,
    error: null,
 };
 
-export const cityDataReducer = (state = initialState, action) => {
+export const forecastWeatherReducer = (state = initialState, action) => {
    switch (action.type) {
-      case actionTypes.FETCH_CITY_DATA_REQUEST:
+      case forecastActionTypes.FETCH_FORECAST_DATA_REQUEST:
          return {
             ...state,
             loadingRequest: true,
             error: null,
          };
-      case actionTypes.FETCH_CITY_DATA_SUCCESS:
+      case forecastActionTypes.FETCH_FORECAST_DATA_SUCCESS:
          return {
             ...state,
-            cityData: action.payload,
+            forecastData: action.payload,
             loadingRequest: false,
             error: null,
          };
-      case actionTypes.FETCH_CITY_DATA_FAILURE:
+      case forecastActionTypes.FETCH_FORECAST_DATA_FAILURE:
          return {
             ...state,
             loadingRequest: false,

@@ -1,16 +1,18 @@
 import search from '../images/icons/search.svg';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCityData } from '../store/actions';
+import { fetchCityData } from '../store/actions/todayWeatherActions';
+import { fetchForecastData } from '../store/actions/forecastWeatherActions';
 
 export function Input() {
    const [value, setValue] = useState('');
    const dispatch = useDispatch();
-   const err = useSelector((state) => state.error);
+   const err = useSelector((state) => state.weather.error);
 
    const handleSubmit = (e) => {
       e.preventDefault();
       dispatch(fetchCityData(value));
+      dispatch(fetchForecastData(value));
       setValue('');
    };
 
