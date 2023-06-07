@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { getTime } from '../helper';
 
 export function SunTimeBlock() {
-   const cityData = useSelector((state) => state.cityData);
+   const cityData = useSelector((state) => state.weather.cityData);
 
    return (
       <div className={'small-top-block'}>

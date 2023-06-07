@@ -1,4 +1,4 @@
-import { api } from '../../helper';
+import { forecastApi } from '../../helper';
 
 export const forecastActionTypes = {
    FETCH_FORECAST_DATA_REQUEST: 'FETCH_FORECAST_DATA_REQUEST',
@@ -27,7 +27,7 @@ export const fetchForecastFailure = (err) => {
 };
 
 export const fetchForecastData = (city) => {
-   const fetchUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${api}&units=metric`;
+   const fetchUrl = `https://api.weatherapi.com/v1/forecast.json?key=${forecastApi}&q=${city}&days=7`;
    return (dispatch) => {
       dispatch(fetchForecastRequest());
 

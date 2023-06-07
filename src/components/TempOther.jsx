@@ -4,7 +4,7 @@ import clouds from '../images/icons/clouds.svg';
 import { useSelector } from 'react-redux';
 
 export function TempOther() {
-   const cityData = useSelector((state) => state.cityData);
+   const cityData = useSelector((state) => state.weather.cityData);
    return (
       <div className={'temp-other-info'}>
          <div className="block-other">
